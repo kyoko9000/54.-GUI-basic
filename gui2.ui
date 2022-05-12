@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>553</width>
+    <height>396</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignBottom">
+        <widget class="QFrame" name="frame_4">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#pushButton:hover { 
+	background-color: rgb(0, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QFrame" name="frame_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(104, 104, 104);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">QLabel#label:hover { 
+	background-color: rgb(0, 255, 0);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>icons/cil-settings.png</pixmap>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="action_5">
+   <property name="text">
+    <string>list1</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>list 2</string>
+   </property>
+  </action>
+  <action name="actionvew_1">
+   <property name="text">
+    <string>view 1</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionview_2">
+   <property name="text">
+    <string>view 2</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="hello_1">
+   <property name="text">
+    <string>hello1</string>
+   </property>
+  </action>
+  <action name="hello_2">
+   <property name="text">
+    <string>hello 2</string>
+   </property>
+  </action>
+  <action name="my_1">
+   <property name="text">
+    <string>my 1</string>
+   </property>
+  </action>
+  <action name="my_2">
+   <property name="text">
+    <string>my 2</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
