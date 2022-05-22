@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(553, 396)
+        MainWindow.resize(317, 272)
         MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -38,31 +38,14 @@ class Ui_MainWindow(object):
         self.pushButton.setStyleSheet("QPushButton#pushButton:hover { \n"
 "    background-color: rgb(0, 255, 0);\n"
 "}")
+        self.pushButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("icons/cil-airplay.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("icons/cil-settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setIconSize(QtCore.QSize(25, 25))
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.horizontalLayout.addWidget(self.frame, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
-        self.frame_2 = QtWidgets.QFrame(self.centralwidget)
-        self.frame_2.setStyleSheet("background-color: rgb(104, 104, 104);")
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_2)
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_2.setSpacing(0)
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label = QtWidgets.QLabel(self.frame_2)
-        self.label.setStyleSheet("QLabel#label:hover { \n"
-"    background-color: rgb(0, 255, 0);\n"
-"}")
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("icons/cil-settings.png"))
-        self.label.setObjectName("label")
-        self.horizontalLayout_2.addWidget(self.label, 0, QtCore.Qt.AlignHCenter)
-        self.horizontalLayout.addWidget(self.frame_2, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         MainWindow.setCentralWidget(self.centralwidget)
         self.action_5 = QtWidgets.QAction(MainWindow)
         self.action_5.setObjectName("action_5")
@@ -93,7 +76,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
         self.action_5.setText(_translate("MainWindow", "list1"))
         self.action_6.setText(_translate("MainWindow", "list 2"))
         self.actionvew_1.setText(_translate("MainWindow", "view 1"))
