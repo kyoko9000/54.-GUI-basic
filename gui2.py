@@ -22,7 +22,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame_2 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frame = QtWidgets.QFrame(self.frame_2)
         self.frame.setStyleSheet("background-color: rgb(104, 104, 104);")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -36,8 +42,8 @@ class Ui_MainWindow(object):
         font.setPointSize(20)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton#pushButton:hover { \n"
-"    background-color: rgb(0, 255, 0);\n"
-"}")
+                                      "    background-color: rgb(0, 255, 0);\n"
+                                      "}")
         self.pushButton.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("icons/cil-settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -45,7 +51,8 @@ class Ui_MainWindow(object):
         self.pushButton.setIconSize(QtCore.QSize(25, 25))
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
-        self.horizontalLayout.addWidget(self.frame, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.horizontalLayout_2.addWidget(self.frame, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
+        self.horizontalLayout.addWidget(self.frame_2)
         MainWindow.setCentralWidget(self.centralwidget)
         self.action_5 = QtWidgets.QAction(MainWindow)
         self.action_5.setObjectName("action_5")
@@ -84,11 +91,13 @@ class Ui_MainWindow(object):
         self.hello_2.setText(_translate("MainWindow", "hello 2"))
         self.my_1.setText(_translate("MainWindow", "my 1"))
         self.my_2.setText(_translate("MainWindow", "my 2"))
-import image_rc
 
+
+import image_rc
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
