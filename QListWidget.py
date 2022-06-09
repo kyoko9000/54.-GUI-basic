@@ -1,4 +1,4 @@
-# ************************** man hinh loai 2 *************************
+#  ************************** man hinh loai 2 *************************
 import sys
 from PyQt5 import QtGui, QtCore, QtWidgets
 from PyQt5.QtCore import QSize, QEvent, QPoint
@@ -181,15 +181,15 @@ class MainWindow(QMainWindow):
         self.menu.popup(self.mapToGlobal(QPoint(self.pos.x()+width-120, self.pos.y()+120)))
         self.menu.triggered.connect(self.menu_action)
 
-    def menu_action(self, x):
-        if x.text() == "option 1":
-            self.button.setText("option text")
-        elif x.text() == "option 2":
-            self.clear_items()
-        elif x.text() == "sub 1":
-            print("sub 1")
-        elif x.text() == "sub 2":
-            print("sub 2")
+    # def menu_action(self, x):
+    #     if x.text() == "option 1":
+    #         self.button.setText("option text")
+    #     elif x.text() == "option 2":
+    #         self.clear_items()
+    #     elif x.text() == "sub 1":
+    #         print("sub 1")
+    #     elif x.text() == "sub 2":
+    #         print("sub 2")
 
 
 if __name__ == "__main__":
