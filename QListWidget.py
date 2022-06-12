@@ -123,6 +123,7 @@ class MainWindow(QMainWindow):
             self.list_item_widget.append((self.centralwidget, self.pushButton, self.newItem))
             self.pushButton.hide()
             self.centralwidget.installEventFilter(self)
+            # self.pushButton.clicked.connect(self.clear_items)
             self.pushButton.clicked.connect(self.menu_popup)
 
             self.uic.listWidget.addItem(self.newItem)
@@ -156,6 +157,7 @@ class MainWindow(QMainWindow):
 
     def clear_items(self):
         row = None
+        # pointer_to_widget = self.sender()
         pointer_to_widget = self.button
         print(pointer_to_widget)
         for list_item in self.list_item_widget:
@@ -169,15 +171,12 @@ class MainWindow(QMainWindow):
         self.button = self.sender()
         width = self.uic.listWidget.width()
         self.pos = self.sender().parent().parent().parent().pos()
-
         self.menu = QMenu()
         self.menu.addAction("option 1")
         self.menu.addAction("option 2")
-
         self.menu1 = self.menu.addMenu("option 3")
         self.menu1.addAction("sub 1")
         self.menu1.addAction("sub 2")
-
         self.menu.popup(self.mapToGlobal(QPoint(self.pos.x()+width-120, self.pos.y()+120)))
         self.menu.triggered.connect(self.menu_action)
 
