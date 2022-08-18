@@ -37,7 +37,7 @@ class MainWindow(QMainWindow):
         self.uic.pushButton_3.clicked.connect(self.closeEvent)
         self.uic.pushButton_2.clicked.connect(self.Window_Restore)
         self.uic.pushButton.clicked.connect(lambda: self.showMinimized())
-    #
+
     def show_menu(self):
         if self.menu == 0:
             self.uic.frame_9.setMaximumSize(QtCore.QSize(210, 16777215))
