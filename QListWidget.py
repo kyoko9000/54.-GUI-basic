@@ -152,8 +152,8 @@ class MainWindow(QMainWindow):
                 if list_item[0] == pointer_to_widget:
                     item = list_item[1]
                     item.show()
-        return super(MainWindow, self).eventFilter(obj, event)
-        # return True
+        # return super(MainWindow, self).eventFilter(obj, event)
+        return True
 
     def clear_items(self):
         row = None
