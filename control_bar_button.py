@@ -33,6 +33,9 @@ class MainWindow(QMainWindow):
         self.uic = Ui_MainWindow()
         self.uic.setupUi(self)
 
+        # hide WindowHint
+        # self.setWindowFlags(Qt.FramelessWindowHint)
+
         # add button
         self.button = QPushButton(self.uic.centralwidget)
         self.button.setText("hide")
@@ -40,7 +43,7 @@ class MainWindow(QMainWindow):
         font.setPointSize(30)
         self.button.setFont(font)
         self.button.setGeometry(QtCore.QRect(50, 100, 211, 70))
-        self.button.clicked.connect(self.hide_hint)
+        self.button.clicked.connect(self.hide_Windowhint)
 
         self.button1 = QPushButton(self.uic.centralwidget)
         self.button1.setText("show")
@@ -48,8 +51,9 @@ class MainWindow(QMainWindow):
         font.setPointSize(30)
         self.button1.setFont(font)
         self.button1.setGeometry(QtCore.QRect(350, 100, 211, 70))
-        self.button1.clicked.connect(self.show_hint)
+        self.button1.clicked.connect(self.show_Windowhint)
 
+        # add sub screen
         self.previewWindow = PreviewWindow()
         pos = self.previewWindow.pos()
         pos.setX(110)
@@ -57,22 +61,22 @@ class MainWindow(QMainWindow):
         self.previewWindow.move(pos)
         self.previewWindow.show()
 
-    def hide_hint(self):
+    def hide_Windowhint(self):
         self.flags = Qt.FramelessWindowHint
         self.updatePreview()
 
-    def show_hint(self):
+    def show_Windowhint(self):
         self.flags = Qt.Window
         self.updatePreview()
 
     def updatePreview(self):
         self.previewWindow.setWindowFlags(self.flags)
-        pos = self.previewWindow.pos()
-        if pos.x() < 0:
-            pos.setX(0)
-        if pos.y() < 0:
-            pos.setY(0)
-        self.previewWindow.move(pos)
+        # pos = self.previewWindow.pos()
+        # if pos.x() < 0:
+        #     pos.setX(0)
+        # if pos.y() < 0:
+        #     pos.setY(0)
+        # self.previewWindow.move(pos)
         self.previewWindow.show()
 
 
