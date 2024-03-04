@@ -54,30 +54,26 @@ class MainWindow(QMainWindow):
         self.button1.clicked.connect(self.show_Windowhint)
 
         # add sub screen
-        self.previewWindow = PreviewWindow()
-        pos = self.previewWindow.pos()
-        pos.setX(110)
-        pos.setY(110)
-        self.previewWindow.move(pos)
-        self.previewWindow.show()
+        # self.previewWindow = PreviewWindow()
+        # pos = self.previewWindow.pos()
+        # pos.setX(110)
+        # pos.setY(110)
+        # self.previewWindow.move(pos)
+        # self.previewWindow.show()
 
     def hide_Windowhint(self):
-        self.flags = Qt.FramelessWindowHint
-        self.updatePreview()
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.show()
+
+        # self.previewWindow.setWindowFlags(Qt.FramelessWindowHint)
+        # self.previewWindow.show()
 
     def show_Windowhint(self):
-        self.flags = Qt.Window
-        self.updatePreview()
+        self.setWindowFlags(Qt.Window)
+        self.show()
 
-    def updatePreview(self):
-        self.previewWindow.setWindowFlags(self.flags)
-        # pos = self.previewWindow.pos()
-        # if pos.x() < 0:
-        #     pos.setX(0)
-        # if pos.y() < 0:
-        #     pos.setY(0)
-        # self.previewWindow.move(pos)
-        self.previewWindow.show()
+        # self.previewWindow.setWindowFlags(Qt.Window)
+        # self.previewWindow.show()
 
 
 if __name__ == "__main__":
