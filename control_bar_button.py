@@ -13,15 +13,10 @@ class PreviewWindow(QWidget):
         super().__init__(parent)
         self.resize(703, 291)
 
-        self.textEdit = QTextEdit()
-        self.textEdit.setReadOnly(True)
-        self.textEdit.setLineWrapMode(QTextEdit.NoWrap)
-
         closeButton = QPushButton("&Close")
         closeButton.clicked.connect(self.close)
 
         layout = QVBoxLayout()
-        layout.addWidget(self.textEdit)
         layout.addWidget(closeButton)
         self.setLayout(layout)
 
