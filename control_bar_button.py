@@ -4,7 +4,7 @@ import sys
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtCore import Qt
 # pip install pyqt5
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QTextEdit
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget
 from gui1 import Ui_MainWindow
 
 
