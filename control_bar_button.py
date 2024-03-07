@@ -9,8 +9,8 @@ from gui1 import Ui_MainWindow
 
 
 class PreviewWindow(QWidget):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+    def __init__(self):
+        super().__init__()
         self.resize(703, 291)
 
         closeButton = QPushButton("&Close")
@@ -21,9 +21,6 @@ class PreviewWindow(QWidget):
         self.setLayout(layout)
 
         self.setWindowTitle("Preview")
-
-    def setWindowFlags(self, flags):
-        super().setWindowFlags(flags)
 
 
 class MainWindow(QMainWindow):
